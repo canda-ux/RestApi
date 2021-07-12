@@ -3,40 +3,56 @@ package com.canda.restapi.Model;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    @SerializedName("ID")
+    @SerializedName("id")
     private String id;
-    @SerializedName("Name")
-    private String name;
-    @SerializedName("Email")
-    private String email;
+    @SerializedName("first_name")
+    private String nama1;
 
-    public User (String id,String name,String email){
-        this.id = id;
-        this.name = name;
-        this.email = email;
-    }
-
-    public void SetID(String id){
-        this.id = id;
-
-    }
-    public void SetName (String name){
-        this.name = name;
-
-    }
-    public void SetEmail(String email){
-        this.email = email;
-
-    }
-
-    public String GetID(){
+    public String getId() {
         return id;
     }
-    public String GetName(){
-        return name;
+
+    public void setId(String id) {
+        this.id = id;
     }
-    public String GetEmail(){
+
+    public String getNama1() {
+        return nama1;
+    }
+
+    public void setNama1(String nama1) {
+        this.nama1 = nama1;
+    }
+
+    public String getNama2() {
+        return nama2;
+    }
+
+    public void setNama2(String nama2) {
+        this.nama2 = nama2;
+    }
+
+    public String getEmail() {
         return email;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @SerializedName("last_name")
+    private String nama2;
+    @SerializedName("email")
+    private String email;
+
+    public User(){}
+
+    public User(String id, String nama1, String nama2, String email) {
+        this.id = id;
+        this.nama1 = nama1;
+        this.nama2 = nama2;
+        this.email = email;
+    }
+
 
 }
